@@ -1,27 +1,23 @@
-﻿//Показать таблицу квадратов чисел от 1 до N
-Console.WriteLine("введите число");
-
-int N = int.Parse(Console.ReadLine());
-
-for (int i = 1; i <= N; i++)
-{
-    Console.WriteLine($"квадрат числа {i} =" + Math.Pow(i, 3));
-}
-// using System;
-
-// namespace My3
+﻿// int[] array = new int[8]; 
+// int len = array.Length;
+// int index = 0;
+// while(index < len)
 // {
-//      class Program
-//      {
-//           static void Main(string[] args)
-//           {
-//                double x = 0.5;
-//                int stepen = 4;
-//                Console.WriteLine("0.5^4 = " + Math.Pow(x, stepen));
-//                Console.WriteLine("5^4 = " + Math.Pow(5, 4));
-//                Console.WriteLine("-5^4 = " + Math.Pow(-5, 4));
-//                Console.WriteLine("-5^(-4) = " + Math.Pow(-5, -4));
-//                Console.ReadKey();
-//           }
-//      }
+//     array[index] = new Random().Next(0,2);
+//     index++;
 // }
+// for (int i=0; i<len; i++)
+// {
+// Console.Write(array[i]);
+// }
+int [] Mass = new int [9] ;
+
+Random NewMass = new Random ();
+
+for (int i=0; i<Mass.Length; i++)
+{
+Mass [i] = NewMass.Next (0,2);
+Console.Write ($" {Mass[i]}");
+
+}
+Console.WriteLine();
