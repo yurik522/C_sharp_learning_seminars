@@ -1,23 +1,22 @@
-﻿// int[] array = new int[8]; 
-// int len = array.Length;
-// int index = 0;
-// while(index < len)
-// {
-//     array[index] = new Random().Next(0,2);
-//     index++;
-// }
-// for (int i=0; i<len; i++)
-// {
-// Console.Write(array[i]);
-// }
-int [] Mass = new int [9] ;
-
-Random NewMass = new Random ();
-
-for (int i=0; i<Mass.Length; i++)
+﻿int[] array = new int[12]; 
+int len = array.Length;
+int index = 0;
+int res = 0;
+int resneg = 0;
+while(index < len)
 {
-Mass [i] = NewMass.Next (0,2);
-Console.Write ($" {Mass[i]}");
-
+    array[index] = new Random().Next(-9,10);
+    index++;
 }
-Console.WriteLine();
+for (int i=0; i < len; i++)
+{
+if (array[i] < 0){
+  resneg += array[i];
+
+} else {
+  res += array[i];
+}
+Console.WriteLine($"{array[i]}");
+}
+Console.WriteLine("");
+Console.WriteLine($"сумма положительных = {res}, сумма отрицательных = {resneg}");
